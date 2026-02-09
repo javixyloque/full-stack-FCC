@@ -1,0 +1,57 @@
+tr[class="read"] {
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, magenta 75%, purple 100%);
+}
+tr[class="to-read"] {
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, greenyellow 75%, green 100%);
+}
+tr[class="in-progress"] {
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, blueviolet 31%, orange 75%, yellow 100%);
+}
+
+span {
+    display: inline-block
+}
+
+tr[class="to-read"]  span[class="status"] {
+    border: 1px solid green;
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, greenyellow 75%, green 100%);
+}
+tr[class="read"]  span[class="status"]{
+    border: 1px solid purple;
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, magenta 75%, purple 100%);
+}
+tr[class="in-progress"]  span[class="status"] {
+    border: 1px solid orange;
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, blueviolet 31%, orange 75%, yellow 100%);
+}
+
+/* EL CIRCUNFLEJO ES PARA QUE SELECCIONE LA PALABRA POR LA QUE EMPIEZA LA CLASE*/
+span[class="status"], span[class^="rate"] {
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+}
+
+span[class^="rate"]>span {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 2px;
+    height: 20px;
+    width: 20px;
+    background-color: salmon;
+} 
+
+/* SELECTS ONE STAR (1) MEANS SELECTS THE FIRST ELEMENT */
+span[class~="one"] span:nth-child(1) {
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, magenta 75%, purple 100%);
+}
+
+/* SELECTS TWO STARS (-N+2) MEANS SELECTS THE FIRST TWO ELEMENTS */
+span[class~="two"]  span:nth-child(-n+2) {
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, green 75%, red 100%);
+}
+
+/* SELECTS THREE STARS (-N+3) MEANS SELECTS THE FIRST THREE ELEMENTS */
+span[class~="three"]  span {
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, orange 75%, yellow 100%);
+}

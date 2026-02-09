@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey</p>
+
+    <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" required placeholder="Juanito">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" required placeholder="juanito@gmail.com">
+        <label for="number" id="number-label">Number</label>
+        <input type="number"  id="number" min="3" max="10" placeholder="Numero entre 3 y 10">
+
+        <select name="seleccion" id="dropdown">
+            <option value="uno">Uno</option>
+            <option value="dos">Dos</option>
+        </select>
+
+        <input type="radio" name="condicion" id="bien " value="bien">
+        <label for="bien">Bien</label>
+        <input type="radio" name="condicion" id="mal " value="mal">
+        <label for="mal">Mal</label>
+
+        <input type="checkbox" name="calderon" value="Jose Manuel Calderon" id="calderon">
+        <input type="checkbox" name="pau-gasol" id="pau-gasol" value="Pau Gasol">
+        <input type="checkbox" name="ricky-rubio" id="ricky-rubio" value="Ricky Rubio">
+
+        <label for="descripcion">Dime por qué elegiste a ese jugador</label>
+        <textarea name="descripcion" id="descripcion" rows="5" cols="40" placeholder="Escribe tu razonamiento"></textarea>
+
+        <button type="submit" id="submit">Enviar</button>
+
+    </form>
+
+</body>
+</html>

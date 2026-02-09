@@ -1,0 +1,19 @@
+/* On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. */
+#navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+}
+
+/* On smaller screens (phones, 600px and down) hide the navbar. */
+@media only screen and (max-width: 600px) {
+    #navbar {
+        display: none;
+    }
+}
+
